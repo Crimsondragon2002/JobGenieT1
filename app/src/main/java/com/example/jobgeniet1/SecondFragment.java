@@ -42,9 +42,6 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 retting.setSeconding(true);
-                if(retting.getSeconding() == true){
-                    Log.d("Seconding", "is found");
-                }
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FourthFragment);
             }

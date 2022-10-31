@@ -30,14 +30,6 @@ public class FourthFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         GetSet checking = new GetSet();
-        SecondFragment secondFragment = new SecondFragment();
-        ThirdFragment thirdFragment = new ThirdFragment();
-        if(checking.getSeconding()==true){
-            Log.d("Seconding", "still found");
-        }
-        else{
-            Log.d("Seconding","lost");
-        }
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
