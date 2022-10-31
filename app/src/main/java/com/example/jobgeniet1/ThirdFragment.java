@@ -14,26 +14,17 @@ import com.example.jobgeniet1.databinding.FragmentThirdBinding;
 
 public class ThirdFragment extends Fragment {
     private FragmentThirdBinding binding;
-    private boolean thirding = true;
-    public boolean getThirding(){
-        return thirding;
-    }
-    void  setThirding(boolean third){
-        this.thirding = third;
-    }
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-        setThirding(true);
         binding = FragmentThirdBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        setThirding(true);
         super.onViewCreated(view, savedInstanceState);
         binding.thirdPrevious.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +38,6 @@ public class ThirdFragment extends Fragment {
             @Override
 
             public void onClick(View view) {
-                setThirding(false);
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_ThirdFragment_to_FourthFragment);
             }
@@ -58,7 +48,6 @@ public class ThirdFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        setThirding(false);
         super.onDestroyView();
         binding = null;
     }
