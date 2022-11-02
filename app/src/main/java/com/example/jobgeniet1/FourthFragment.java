@@ -1,5 +1,6 @@
 package com.example.jobgeniet1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.jobgeniet1.databinding.FragmentFourthBinding;
 import com.example.jobgeniet1.databinding.FragmentThirdBinding;
+import com.example.jobgeniet1.ui.login.LoginActivity;
 
 public class FourthFragment extends Fragment {
     private FragmentFourthBinding binding;
@@ -43,7 +45,13 @@ public class FourthFragment extends Fragment {
                 }
             }
         });
-
+        binding.button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent login = new Intent(getActivity(), LoginActivity.class);
+                startActivity(login);
+            }
+        });
     }
 
     @Override
