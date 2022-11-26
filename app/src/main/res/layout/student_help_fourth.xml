@@ -12,7 +12,7 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="250dp"
         android:layout_marginEnd="150dp"
-        android:text="TextView"
+        android:text="This describes student options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
