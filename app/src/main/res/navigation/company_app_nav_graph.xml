@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/company_app_nav_graph">
+    android:id="@+id/company_app_nav_graph"
+    app:startDestination="@id/companyAppBoard">
 
+    <fragment
+        android:id="@+id/companyAppBoard"
+        android:name="com.example.jobgeniet1.CompanyAppBoard"
+        android:label="CompanyAppBoard" >
+        <action
+            android:id="@+id/action_companyAppBoard_to_companyAppContact"
+            app:destination="@id/companyAppContact" />
+        <action
+            android:id="@+id/action_companyAppBoard_to_companyAppOptions"
+            app:destination="@id/companyAppOptions" />
+        <action
+            android:id="@+id/action_companyAppBoard_to_companyAppHome"
+            app:destination="@id/companyAppHome" />
+        <action
+            android:id="@+id/action_companyAppBoard_to_companyFirstHelp"
+            app:destination="@id/companyFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyAppHome"
+        android:name="com.example.jobgeniet1.CompanyAppHome"
+        android:label="CompanyAppHome" >
+        <action
+            android:id="@+id/action_companyAppHome_to_companyAppContact"
+            app:destination="@id/companyAppContact" />
+        <action
+            android:id="@+id/action_companyAppHome_to_companyAppOptions"
+            app:destination="@id/companyAppOptions" />
+        <action
+            android:id="@+id/action_companyAppHome_to_companyAppBoard"
+            app:destination="@id/companyAppBoard" />
+        <action
+            android:id="@+id/action_companyAppHome_to_companyFirstHelp"
+            app:destination="@id/companyFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyAppOptions"
+        android:name="com.example.jobgeniet1.CompanyAppOptions"
+        android:label="CompanyAppOptions" >
+        <action
+            android:id="@+id/action_companyAppOptions_to_companyAppContact"
+            app:destination="@id/companyAppContact" />
+        <action
+            android:id="@+id/action_companyAppOptions_to_companyAppHome"
+            app:destination="@id/companyAppHome" />
+        <action
+            android:id="@+id/action_companyAppOptions_to_companyAppBoard"
+            app:destination="@id/companyAppBoard" />
+        <action
+            android:id="@+id/action_companyAppOptions_to_companyFirstHelp"
+            app:destination="@id/companyFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyAppContact"
+        android:name="com.example.jobgeniet1.CompanyAppContact"
+        android:label="CompanyAppContact" >
+        <action
+            android:id="@+id/action_companyAppContact_to_companyAppBoard"
+            app:destination="@id/companyAppBoard" />
+        <action
+            android:id="@+id/action_companyAppContact_to_companyAppOptions"
+            app:destination="@id/companyAppOptions" />
+        <action
+            android:id="@+id/action_companyAppContact_to_companyAppHome"
+            app:destination="@id/companyAppHome" />
+        <action
+            android:id="@+id/action_companyAppContact_to_companyFirstHelp"
+            app:destination="@id/companyFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyFirstHelp"
+        android:name="com.example.jobgeniet1.CompanyFirstHelp"
+        android:label="CompanyFirstHelp" >
+        <action
+            android:id="@+id/action_companyFirstHelp_to_companySecondHelp"
+            app:destination="@id/companySecondHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/companySecondHelp"
+        android:name="com.example.jobgeniet1.CompanySecondHelp"
+        android:label="CompanySecondHelp" >
+        <action
+            android:id="@+id/action_companySecondHelp_to_companyFirstHelp"
+            app:destination="@id/companyFirstHelp" />
+        <action
+            android:id="@+id/action_companySecondHelp_to_companyThirdHelp"
+            app:destination="@id/companyThirdHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyThirdHelp"
+        android:name="com.example.jobgeniet1.CompanyThirdHelp"
+        android:label="CompanyThirdHelp" >
+        <action
+            android:id="@+id/action_companyThirdHelp_to_companySecondHelp"
+            app:destination="@id/companySecondHelp" />
+        <action
+            android:id="@+id/action_companyThirdHelp_to_companyFourthHelp"
+            app:destination="@id/companyFourthHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyFourthHelp"
+        android:name="com.example.jobgeniet1.CompanyFourthHelp"
+        android:label="CompanyFourthHelp" >
+        <action
+            android:id="@+id/action_companyFourthHelp_to_companyThirdHelp"
+            app:destination="@id/companyThirdHelp" />
+        <action
+            android:id="@+id/action_companyFourthHelp_to_companyAppOptions"
+            app:destination="@id/companyAppOptions" />
+        <action
+            android:id="@+id/action_companyFourthHelp_to_companyAppHome"
+            app:destination="@id/companyAppHome" />
+        <action
+            android:id="@+id/action_companyFourthHelp_to_companyAppContact"
+            app:destination="@id/companyAppContact" />
+        <action
+            android:id="@+id/action_companyFourthHelp_to_companyAppBoard"
+            app:destination="@id/companyAppBoard" />
+    </fragment>
 </navigation>

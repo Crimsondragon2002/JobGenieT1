@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".StudentAppBoard">
 
     <Button
         android:id="@+id/StudentContact"
@@ -36,6 +37,7 @@
         android:layout_marginTop="600dp"
         android:layout_marginEnd="5dp"
         android:text="Board"
+        android:enabled="false"
         app:layout_constraintEnd_toStartOf="@+id/StudentOption"
         app:layout_constraintStart_toEndOf="@+id/StudentHome"
         app:layout_constraintTop_toTopOf="parent" />

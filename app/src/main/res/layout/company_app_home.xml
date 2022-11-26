@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CompanyAppHome">
 
     <Button
         android:id="@+id/CompanyContact2"
@@ -24,6 +25,7 @@
         android:layout_marginTop="600dp"
         android:layout_marginEnd="5dp"
         android:text="Home"
+        android:enabled="false"
         app:layout_constraintEnd_toStartOf="@+id/CompanyBoard2"
         app:layout_constraintStart_toEndOf="@+id/CompanyContact2"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,6 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/student_app_nav_graph">
-
+    android:id="@+id/student_app_nav_graph"
+    app:startDestination="@id/studentAppOptions">
+    <fragment
+        android:id="@+id/studentAppOptions"
+        android:name="com.example.jobgeniet1.StudentAppOptions"
+        android:label="StudentAppOptions" >
+        <action
+            android:id="@+id/action_studentAppOptions_to_studentAppHome"
+            app:destination="@id/studentAppHome" />
+        <action
+            android:id="@+id/action_studentAppOptions_to_studentAppContact2"
+            app:destination="@id/studentAppContact2" />
+        <action
+            android:id="@+id/action_studentAppOptions_to_studentAppBoard"
+            app:destination="@id/studentAppBoard" />
+        <action
+            android:id="@+id/action_studentAppOptions_to_studentFirstHelp"
+            app:destination="@id/studentFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAppBoard"
+        android:name="com.example.jobgeniet1.StudentAppBoard"
+        android:label="StudentAppBoard" >
+        <action
+            android:id="@+id/action_studentAppBoard_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentAppBoard_to_studentAppHome"
+            app:destination="@id/studentAppHome" />
+        <action
+            android:id="@+id/action_studentAppBoard_to_studentAppContact2"
+            app:destination="@id/studentAppContact2" />
+        <action
+            android:id="@+id/action_studentAppBoard_to_studentFirstHelp"
+            app:destination="@id/studentFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAppContact2"
+        android:name="com.example.jobgeniet1.StudentAppContact"
+        android:label="StudentAppContact" >
+        <action
+            android:id="@+id/action_studentAppContact2_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentAppContact2_to_studentAppBoard"
+            app:destination="@id/studentAppBoard" />
+        <action
+            android:id="@+id/action_studentAppContact2_to_studentAppHome"
+            app:destination="@id/studentAppHome" />
+        <action
+            android:id="@+id/action_studentAppContact2_to_studentFirstHelp"
+            app:destination="@id/studentFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAppHome"
+        android:name="com.example.jobgeniet1.StudentAppHome"
+        android:label="StudentAppHome" >
+        <action
+            android:id="@+id/action_studentAppHome_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentAppHome_to_studentAppBoard"
+            app:destination="@id/studentAppBoard" />
+        <action
+            android:id="@+id/action_studentAppHome_to_studentAppContact2"
+            app:destination="@id/studentAppContact2" />
+        <action
+            android:id="@+id/action_studentAppHome_to_studentFirstHelp"
+            app:destination="@id/studentFirstHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentFirstHelp"
+        android:name="com.example.jobgeniet1.StudentFirstHelp"
+        android:label="StudentFirstHelp" >
+        <action
+            android:id="@+id/action_studentFirstHelp_to_studentSecondHelp"
+            app:destination="@id/studentSecondHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentSecondHelp"
+        android:name="com.example.jobgeniet1.StudentSecondHelp"
+        android:label="StudentSecondHelp" >
+        <action
+            android:id="@+id/action_studentSecondHelp_to_studentFirstHelp"
+            app:destination="@id/studentFirstHelp" />
+        <action
+            android:id="@+id/action_studentSecondHelp_to_studentThirdHelp"
+            app:destination="@id/studentThirdHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentThirdHelp"
+        android:name="com.example.jobgeniet1.StudentThirdHelp"
+        android:label="StudentThirdHelp" >
+        <action
+            android:id="@+id/action_studentThirdHelp_to_studentSecondHelp"
+            app:destination="@id/studentSecondHelp" />
+        <action
+            android:id="@+id/action_studentThirdHelp_to_studentFourthHelp"
+            app:destination="@id/studentFourthHelp" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentFourthHelp"
+        android:name="com.example.jobgeniet1.StudentFourthHelp"
+        android:label="StudentFourthHelp" >
+        <action
+            android:id="@+id/action_studentFourthHelp_to_studentThirdHelp"
+            app:destination="@id/studentThirdHelp" />
+        <action
+            android:id="@+id/action_studentFourthHelp_to_studentAppHome"
+            app:destination="@id/studentAppHome" />
+        <action
+            android:id="@+id/action_studentFourthHelp_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentFourthHelp_to_studentAppContact2"
+            app:destination="@id/studentAppContact2" />
+        <action
+            android:id="@+id/action_studentFourthHelp_to_studentAppBoard"
+            app:destination="@id/studentAppBoard" />
+    </fragment>
 </navigation>
