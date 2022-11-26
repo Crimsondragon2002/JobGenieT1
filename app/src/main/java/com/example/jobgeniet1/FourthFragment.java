@@ -2,7 +2,6 @@ package com.example.jobgeniet1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.jobgeniet1.databinding.FragmentFourthBinding;
-import com.example.jobgeniet1.databinding.FragmentThirdBinding;
-import com.example.jobgeniet1.ui.login.LoginActivity;
 
 public class FourthFragment extends Fragment {
     private FragmentFourthBinding binding;
