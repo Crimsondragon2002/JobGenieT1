@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.jobgeniet1.databinding.StudentAppBoardBinding;
 
@@ -25,6 +26,39 @@ public class StudentAppBoard extends Fragment {
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        GetSet Boarder = new GetSet();
+        Boarder.SetBoarding(false);
+        binding.StudentContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(StudentAppBoard.this).navigate(R.id.action_studentAppBoard_to_studentAppContact);
+            }
+        });
+        binding.StudentHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(StudentAppBoard.this).navigate(R.id.action_studentAppBoard_to_studentAppHome);
+            }
+        });
+        binding.StudentOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(StudentAppBoard.this).navigate(R.id.action_studentAppBoard_to_studentAppOptions);
+            }
+        });
+        binding.Studenthelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Boarder.SetBoarding(true);
+                NavHostFragment.findNavController(StudentAppBoard.this).navigate(R.id.action_studentAppBoard_to_studentFirstHelp);
+            }
+        });
+    }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }

@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.Locale;
+
 public class DBhelper extends SQLiteOpenHelper {
     public static final String DBNAME = "Customers.db";
 
@@ -85,4 +87,5 @@ public class DBhelper extends SQLiteOpenHelper {
             return false;
         }
     }
+
 }

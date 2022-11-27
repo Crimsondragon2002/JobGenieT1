@@ -79,6 +79,18 @@
         <action
             android:id="@+id/action_companyFirstHelp_to_companySecondHelp"
             app:destination="@id/companySecondHelp" />
+        <action
+            android:id="@+id/action_companyFirstHelp_to_companyAppBoard"
+            app:destination="@id/companyAppBoard" />
+        <action
+            android:id="@+id/action_companyFirstHelp_to_companyAppContact"
+            app:destination="@id/companyAppContact" />
+        <action
+            android:id="@+id/action_companyFirstHelp_to_companyAppHome"
+            app:destination="@id/companyAppHome" />
+        <action
+            android:id="@+id/action_companyFirstHelp_to_companyAppOptions"
+            app:destination="@id/companyAppOptions" />
     </fragment>
     <fragment
         android:id="@+id/companySecondHelp"

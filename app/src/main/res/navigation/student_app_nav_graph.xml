@@ -11,8 +11,8 @@
             android:id="@+id/action_studentAppOptions_to_studentAppHome"
             app:destination="@id/studentAppHome" />
         <action
-            android:id="@+id/action_studentAppOptions_to_studentAppContact2"
-            app:destination="@id/studentAppContact2" />
+            android:id="@+id/action_studentAppOptions_to_studentAppContact"
+            app:destination="@id/studentAppContact" />
         <action
             android:id="@+id/action_studentAppOptions_to_studentAppBoard"
             app:destination="@id/studentAppBoard" />
@@ -31,27 +31,27 @@
             android:id="@+id/action_studentAppBoard_to_studentAppHome"
             app:destination="@id/studentAppHome" />
         <action
-            android:id="@+id/action_studentAppBoard_to_studentAppContact2"
-            app:destination="@id/studentAppContact2" />
+            android:id="@+id/action_studentAppBoard_to_studentAppContact"
+            app:destination="@id/studentAppContact" />
         <action
             android:id="@+id/action_studentAppBoard_to_studentFirstHelp"
             app:destination="@id/studentFirstHelp" />
     </fragment>
     <fragment
-        android:id="@+id/studentAppContact2"
+        android:id="@+id/studentAppContact"
         android:name="com.example.jobgeniet1.StudentAppContact"
         android:label="StudentAppContact" >
         <action
-            android:id="@+id/action_studentAppContact2_to_studentAppOptions"
+            android:id="@+id/action_studentAppContact_to_studentAppOptions"
             app:destination="@id/studentAppOptions" />
         <action
-            android:id="@+id/action_studentAppContact2_to_studentAppBoard"
+            android:id="@+id/action_studentAppContact_to_studentAppBoard"
             app:destination="@id/studentAppBoard" />
         <action
-            android:id="@+id/action_studentAppContact2_to_studentAppHome"
+            android:id="@+id/action_studentAppContact_to_studentAppHome"
             app:destination="@id/studentAppHome" />
         <action
-            android:id="@+id/action_studentAppContact2_to_studentFirstHelp"
+            android:id="@+id/action_studentAppContact_to_studentFirstHelp"
             app:destination="@id/studentFirstHelp" />
     </fragment>
     <fragment
@@ -65,8 +65,8 @@
             android:id="@+id/action_studentAppHome_to_studentAppBoard"
             app:destination="@id/studentAppBoard" />
         <action
-            android:id="@+id/action_studentAppHome_to_studentAppContact2"
-            app:destination="@id/studentAppContact2" />
+            android:id="@+id/action_studentAppHome_to_studentAppContact"
+            app:destination="@id/studentAppContact" />
         <action
             android:id="@+id/action_studentAppHome_to_studentFirstHelp"
             app:destination="@id/studentFirstHelp" />
@@ -78,6 +78,18 @@
         <action
             android:id="@+id/action_studentFirstHelp_to_studentSecondHelp"
             app:destination="@id/studentSecondHelp" />
+        <action
+            android:id="@+id/action_studentFirstHelp_to_studentAppContact"
+            app:destination="@id/studentAppContact" />
+        <action
+            android:id="@+id/action_studentFirstHelp_to_studentAppBoard"
+            app:destination="@id/studentAppBoard" />
+        <action
+            android:id="@+id/action_studentFirstHelp_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentFirstHelp_to_studentAppHome"
+            app:destination="@id/studentAppHome" />
     </fragment>
     <fragment
         android:id="@+id/studentSecondHelp"
@@ -115,8 +127,8 @@
             android:id="@+id/action_studentFourthHelp_to_studentAppOptions"
             app:destination="@id/studentAppOptions" />
         <action
-            android:id="@+id/action_studentFourthHelp_to_studentAppContact2"
-            app:destination="@id/studentAppContact2" />
+            android:id="@+id/action_studentFourthHelp_to_studentAppContact"
+            app:destination="@id/studentAppContact" />
         <action
             android:id="@+id/action_studentFourthHelp_to_studentAppBoard"
             app:destination="@id/studentAppBoard" />

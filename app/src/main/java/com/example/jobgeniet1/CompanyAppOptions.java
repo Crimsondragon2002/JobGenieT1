@@ -1,6 +1,53 @@
 package com.example.jobgeniet1;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
+
+import com.example.jobgeniet1.databinding.CompanyAppOptionsBinding;
 
 public class CompanyAppOptions extends Fragment {
+    CompanyAppOptionsBinding binding;
+    public View onCreateView(
+            LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState
+    ) {
+
+        binding =CompanyAppOptionsBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+
+    }
+
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding.CompanyBoard4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(CompanyAppOptions.this).navigate(R.id.action_companyAppOptions_to_companyAppBoard);
+            }
+        });
+        binding.CompanyContact4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(CompanyAppOptions.this).navigate(R.id.action_companyAppOptions_to_companyAppContact);
+            }
+        });
+        binding.CompanyHome4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(CompanyAppOptions.this).navigate(R.id.action_companyAppOptions_to_companyFirstHelp);
+            }
+        });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

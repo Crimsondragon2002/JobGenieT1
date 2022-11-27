@@ -32,6 +32,8 @@ public class SecondFragment extends Fragment {
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        GetSet retting = new GetSet();
+        retting.setSeconding(false);
         view.getId();
         super.onViewCreated(view, savedInstanceState);
         EditText StudentName = (EditText) view.findViewById(R.id.editTextStudentName);
@@ -56,6 +58,7 @@ public class SecondFragment extends Fragment {
         binding.buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                retting.setSeconding(true);
                 String name = StudentName.getText().toString();
                 String age = StudentsAge.getText().toString();
                 String salary = StudentSalary.getText().toString();
