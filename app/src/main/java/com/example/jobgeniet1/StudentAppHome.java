@@ -39,7 +39,7 @@ public class StudentAppHome extends Fragment {
                 NavHostFragment.findNavController(StudentAppHome.this).navigate(R.id.action_studentAppHome_to_studentAppContact);
             }
         });
-        binding.StudentBoard3.setOnClickListener(new View.OnClickListener() {
+        binding.StudentOption3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(StudentAppHome.this).navigate(R.id.action_studentAppHome_to_studentAppOptions);

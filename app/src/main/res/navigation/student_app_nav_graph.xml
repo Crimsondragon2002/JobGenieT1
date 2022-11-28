@@ -59,17 +59,17 @@
         android:name="com.example.jobgeniet1.StudentAppHome"
         android:label="StudentAppHome" >
         <action
-            android:id="@+id/action_studentAppHome_to_studentAppOptions"
-            app:destination="@id/studentAppOptions" />
-        <action
-            android:id="@+id/action_studentAppHome_to_studentAppBoard"
-            app:destination="@id/studentAppBoard" />
-        <action
             android:id="@+id/action_studentAppHome_to_studentAppContact"
             app:destination="@id/studentAppContact" />
         <action
             android:id="@+id/action_studentAppHome_to_studentFirstHelp"
             app:destination="@id/studentFirstHelp" />
+        <action
+            android:id="@+id/action_studentAppHome_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentAppHome_to_studentAppBoard"
+            app:destination="@id/studentAppBoard" />
     </fragment>
     <fragment
         android:id="@+id/studentFirstHelp"
