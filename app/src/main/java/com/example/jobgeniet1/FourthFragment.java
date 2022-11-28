@@ -2,6 +2,7 @@ package com.example.jobgeniet1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,16 @@ public class FourthFragment extends Fragment {
         binding.button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                DBhelper Dat = new DBhelper(getContext());
+
+                if(Dat.checkUsernameAndPassword("g","h")==false){
+                    if(Dat.checkUser("g")==false){
+                        Log.i("error","username is incorrect");
+                    }
+                    if(Dat.checkPassword("h")==false){
+                        Log.i("error","password is incorrect");
+                    }
+                }
                 Intent login = new Intent(getActivity(), LoginActivity.class);
                 startActivity(login);
             }

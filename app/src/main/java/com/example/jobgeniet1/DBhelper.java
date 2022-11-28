@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.Locale;
 
@@ -65,6 +66,17 @@ public class DBhelper extends SQLiteOpenHelper {
         }
         else {
             return true;
+        }
+    }
+    public boolean checkPassword(String password){
+        SQLiteDatabase Dat = this.getReadableDatabase();
+        Log.i("query","query password is "+password);
+        Cursor cursor = Dat.rawQuery("Select * from security where password = ?", new String[]{password});
+        if(cursor.getCount()>0){
+            return true;
+        }
+        else{
+            return false;
         }
     }
     public boolean checkUsernameAndPassword(String username, String password){

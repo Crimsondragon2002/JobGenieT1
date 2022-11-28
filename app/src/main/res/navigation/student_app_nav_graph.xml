@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/student_app_nav_graph"
-    app:startDestination="@id/studentAppOptions">
+    app:startDestination="@id/studentAppHome">
     <fragment
         android:id="@+id/studentAppOptions"
         android:name="com.example.jobgeniet1.StudentAppOptions"
