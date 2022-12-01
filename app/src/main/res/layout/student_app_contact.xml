@@ -38,12 +38,12 @@
         android:layout_marginTop="600dp"
         android:layout_marginEnd="5dp"
         android:text="Board"
-        app:layout_constraintEnd_toStartOf="@+id/StudentOption2"
+        app:layout_constraintEnd_toStartOf="@+id/StudentOptions2"
         app:layout_constraintStart_toEndOf="@+id/StudentHome2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/StudentOption2"
+        android:id="@+id/StudentOptions2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -53,23 +53,104 @@
         app:layout_constraintStart_toEndOf="@+id/StudentBoard2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="100dp"
-        android:text="This is the student contacts"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/Studenthelp2"
+        android:id="@+id/studenthelp2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="i"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="Enter search info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ViewData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="2dp"
+        android:text="Result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StudenteditTextSalary" />
+
+    <EditText
+        android:id="@+id/StudenteditTextSkills"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Skills seperated by commas"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+
+    <EditText
+        android:id="@+id/StudenteditTextInternational"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:hint="accept international, use y or n"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StudenteditTextSkills" />
+
+    <Button
+        android:id="@+id/AddData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:text="Add"
+        app:layout_constraintStart_toEndOf="@+id/ViewData"
+        app:layout_constraintTop_toBottomOf="@+id/StudenteditTextSalary" />
+
+    <Button
+        android:id="@+id/ClearData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:text="Clear"
+        app:layout_constraintStart_toEndOf="@+id/AddData"
+        app:layout_constraintTop_toBottomOf="@+id/StudenteditTextSalary" />
+
+    <EditText
+        android:id="@+id/StudenteditTextMatchCount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:hint="Enter match count"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StudenteditTextInternational" />
+
+    <EditText
+        android:id="@+id/StudenteditTextSalary"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:hint="Enter salary in numbers USD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StudenteditTextMatchCount" />
 </androidx.constraintlayout.widget.ConstraintLayout>

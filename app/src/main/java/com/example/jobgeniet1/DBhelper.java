@@ -11,7 +11,8 @@ import java.util.Locale;
 
 public class DBhelper extends SQLiteOpenHelper {
     public static final String DBNAME = "Customers.db";
-
+    public static final String CustomerTABLE_NAME ="customers";
+    public static final String LISTTABLE_NAME ="list";
     public DBhelper(Context context) {
         super(context, DBNAME, null, 1);
     }
@@ -19,8 +20,11 @@ public class DBhelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase Dat) {
-        Dat.execSQL("create Table customers(name TEXT primary key, age INTEGER, skills TEXT,salary INTEGER, international TEXT,userType INTEGER)");
+        String createTableCustomer = "create TABLE "+CustomerTABLE_NAME + "(" +"name TEXT primary key, "+"skills TEXT, "+"international TEXT, salary INTEGER, userType INTEGER)";
+        Dat.execSQL(createTableCustomer);
         Dat.execSQL("create Table security(username TEXT primary key, password TEXT, userType INTEGER)");
+        String createTableList = "create TABLE " + LISTTABLE_NAME +"("+"name TEXT primary key, " + "skills TEXT, " + "international TEXT, salary INTEGER)";
+        Dat.execSQL(createTableList);
     }
 
     @Override
@@ -28,12 +32,11 @@ public class DBhelper extends SQLiteOpenHelper {
         Dat.execSQL("drop Table if exists customers");
     }
 
-    public Boolean insertData(String name, int age, String skills, int salary, String international, int userType) {
+    public Boolean insertData(String name, String skills, int salary, String international, int userType) {
         SQLiteDatabase Dat = this.getWritableDatabase();
         ContentValues content = new ContentValues();
 
         content.put("name", name);
-        content.put("age", age);
         content.put("skills", skills);
         content.put("salary", salary);
         content.put("international", international);
@@ -98,6 +101,63 @@ public class DBhelper extends SQLiteOpenHelper {
         else {
             return false;
         }
+    }
+
+    public String[] getRows(int v) {
+        String[] rows = new String[500];
+        SQLiteDatabase Dat = this.getReadableDatabase();
+        Cursor cursor = Dat.rawQuery("SELECT * FROM " + CustomerTABLE_NAME, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            int i = 0;
+            do {
+                rows[i] = cursor.getString(v);
+                i++;
+            } while (cursor.moveToNext());
+        }
+        return rows;
+
+    }
+    public String[] getListRows(int v){
+        String[] rows = new String[500];
+        SQLiteDatabase Dat = this.getReadableDatabase();
+        Cursor cursor = Dat.rawQuery("SELECT * FROM " + LISTTABLE_NAME, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            int i = 0;
+            do {
+                rows[i] = cursor.getString(v);
+                i++;
+            } while (cursor.moveToNext());
+        }
+        return rows;
+
+    }
+    public boolean insertList(String name, String skills, String international, int salary) {
+        SQLiteDatabase Dat = this.getWritableDatabase();
+        ContentValues content = new ContentValues();
+
+        content.put("name", name);
+        content.put("skills", skills);
+        content.put("international",international);
+        content.put("salary",salary);
+        long result = Dat.insert("list", null, content);
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    public  Cursor getList(){
+        SQLiteDatabase Dat = this.getWritableDatabase();
+        Cursor cursor = Dat.rawQuery("Select * from list",null);
+        return cursor;
+    }
+    public void deleteTableF(String tablename) {
+
+        String selectQuery = "DELETE FROM " + tablename;
+
+        SQLiteDatabase db= this.getWritableDatabase();
+
+        db.execSQL(selectQuery);
     }
 
 }

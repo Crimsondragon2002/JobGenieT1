@@ -40,7 +40,7 @@ public class SecondFragment extends Fragment {
         view.getId();
         super.onViewCreated(view, savedInstanceState);
         EditText StudentName = (EditText) view.findViewById(R.id.editTextStudentName);
-        EditText StudentsAge = (EditText) view.findViewById(R.id.editTextStudentAge);
+
         EditText StudentSalary = (EditText) view.findViewById(R.id.editTextStudentSalary);
         EditText StudentInternational = (EditText) view.findViewById(R.id.editTextStudentInternational);
         EditText StudentUsername = (EditText) view.findViewById(R.id.editTextStudentUsername);
@@ -63,7 +63,7 @@ public class SecondFragment extends Fragment {
             public void onClick(View view) {
                 retting.setSeconding(true);
                 String name = StudentName.getText().toString();
-                String age = StudentsAge.getText().toString();
+
                 String salary = StudentSalary.getText().toString();
                 int savedSalary = tryParse(salary);
                 String international = StudentInternational.getText().toString();
@@ -72,15 +72,15 @@ public class SecondFragment extends Fragment {
                 String pass = StudentPassword.getText().toString();
                 passFind=pass;
                 String skills = StudentSkills.getText().toString();
-                int savedAge = tryParse(age);
-                if(name.equals("")|| age.equals("") || salary.equals("") || international.equals("") || user.equals("") || pass.equals("") || skills.equals("")) {
+
+                if(name.equals("") || salary.equals("") || international.equals("") || user.equals("") || pass.equals("") || skills.equals("")) {
                     Toast.makeText(getContext(), "A field is empty", Toast.LENGTH_SHORT).show();
                 }
-                else if(savedSalary == -1 || savedAge == -1){
+                else if(savedSalary == -1){
                     Toast.makeText(getContext(), "Salary and Age should be integers", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Boolean try1 = Dat.insertData(name,savedAge,skills,savedSalary,international,0);
+                    Boolean try1 = Dat.insertData(name,skills,savedSalary,international,0);
                     Boolean try2 = Dat.insertSecurity(user, pass,0);
                     if(try1==true && try2 == true){
                         Log.i("sighting","definitely sees the username and password");

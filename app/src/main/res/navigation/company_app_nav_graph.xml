@@ -71,6 +71,9 @@
         <action
             android:id="@+id/action_companyAppContact_to_companyFirstHelp"
             app:destination="@id/companyFirstHelp" />
+        <action
+            android:id="@+id/action_companyAppContact_to_companyView"
+            app:destination="@id/companyView" />
     </fragment>
     <fragment
         android:id="@+id/companyFirstHelp"
@@ -133,5 +136,14 @@
         <action
             android:id="@+id/action_companyFourthHelp_to_companyAppBoard"
             app:destination="@id/companyAppBoard" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyView"
+        android:name="com.example.jobgeniet1.CompanyView"
+        android:label="CompanyView">
+
+        <action
+            android:id="@+id/action_companyView_to_companyAppContact"
+            app:destination="@id/companyAppContact" />
     </fragment>
 </navigation>
