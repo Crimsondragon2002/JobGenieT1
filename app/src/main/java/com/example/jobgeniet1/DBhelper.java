@@ -48,7 +48,25 @@ public class DBhelper extends SQLiteOpenHelper {
             return true;
         }
     }
-
+    public Boolean updateData(String oldName,String name, String skills, int salary, String international, int userType){
+        SQLiteDatabase Dat = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name",name);
+        contentValues.put("skills",skills);
+        contentValues.put("salary",salary);
+        contentValues.put("international",international);
+        contentValues.put("userType",userType);
+        Dat.update("customers",contentValues,"name =?",new String[]{oldName});
+        return true;
+    }
+    public Boolean updateSecurity(String oldUsername, String username, String password, int userType){
+        SQLiteDatabase Dat = this.getWritableDatabase();
+        ContentValues content = new ContentValues();
+        content.put("username", username);
+        content.put("password", password);
+        Dat.update("security",content,"username=?",new String[]{oldUsername});
+        return true;
+    }
     public Boolean insertSecurity(String username, String password, int userType) {
         SQLiteDatabase Dat = this.getWritableDatabase();
         ContentValues content = new ContentValues();
@@ -71,6 +89,17 @@ public class DBhelper extends SQLiteOpenHelper {
             return true;
         }
     }
+    public boolean checkName(String name){
+        SQLiteDatabase Dat = this.getReadableDatabase();
+        Cursor cursor = Dat.rawQuery("Select * from customers where name = ?", new String[]{name});
+        if(cursor.getCount()>0){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
     public boolean checkPassword(String password){
         SQLiteDatabase Dat = this.getReadableDatabase();
         Log.i("query","query password is "+password);
@@ -117,6 +146,7 @@ public class DBhelper extends SQLiteOpenHelper {
         return rows;
 
     }
+
     public String[] getListRows(int v){
         String[] rows = new String[500];
         SQLiteDatabase Dat = this.getReadableDatabase();
@@ -159,5 +189,14 @@ public class DBhelper extends SQLiteOpenHelper {
 
         db.execSQL(selectQuery);
     }
+    public Integer deleteTableS(String tablename,String searcher){
+        SQLiteDatabase Dat = this.getWritableDatabase();
+        if(tablename.equals("customers")) {
+            return Dat.delete(tablename, "name = ?",new String[]{searcher});
+        }
+        else{
+           return Dat.delete(tablename,"username = ?",new String[]{searcher});
+        }
 
+    }
 }

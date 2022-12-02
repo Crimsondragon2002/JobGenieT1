@@ -4,41 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
-
+    tools:context=".CompanyUpdate">
     <TextView
         android:id="@+id/textview_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:hint="Enter Student Info"
-        app:layout_constraintBottom_toTopOf="@id/button_back"
+        android:layout_marginTop="250dp"
+        android:hint="Enter Company Info"
+        app:layout_constraintBottom_toTopOf="@id/companybutton_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/companybutton_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="350dp"
         android:text="@string/previous"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_second" />
 
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/companybutton_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="350dp"
         android:text="Next"
-        app:layout_constraintStart_toEndOf="@+id/button_back"
+        app:layout_constraintStart_toEndOf="@+id/companybutton_back"
         app:layout_constraintTop_toBottomOf="@+id/textview_second" />
 
     <EditText
-        android:id="@+id/editTextStudentName"
+        android:id="@+id/editTextCompanyName"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -47,13 +46,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:hint="Student Name"
+        android:hint="Company Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_second" />
 
     <EditText
-        android:id="@+id/editTextStudentSalary"
+        android:id="@+id/editTextCompanySalary"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -66,10 +65,10 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCompanyName" />
 
     <EditText
-        android:id="@+id/editTextStudentInternational"
+        android:id="@+id/editTextCompanyInternational"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -78,13 +77,13 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:hint="Enter if Internation student, use y or n"
+        android:hint="Enter if Internation Company, use y or n"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentSalary" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCompanySalary" />
 
     <EditText
-        android:id="@+id/editTextStudentUsername"
+        android:id="@+id/editTextCompanyUsername"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -96,10 +95,10 @@
         android:hint="Username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentInternational" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCompanyInternational" />
 
     <EditText
-        android:id="@+id/editTextStudentPassword"
+        android:id="@+id/editTextCompanyPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -111,10 +110,10 @@
         android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCompanyUsername" />
 
     <EditText
-        android:id="@+id/editTextStudentSkills"
+        android:id="@+id/editTextCompanySkills"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -127,5 +126,5 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCompanyPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>

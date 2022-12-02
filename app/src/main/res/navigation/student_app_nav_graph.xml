@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_studentAppOptions_to_studentFirstHelp"
             app:destination="@id/studentFirstHelp" />
+        <action
+            android:id="@+id/action_studentAppOptions_to_studentLogin"
+            app:destination="@id/studentLogin" />
     </fragment>
     <fragment
         android:id="@+id/studentAppBoard"
@@ -37,6 +40,10 @@
         <action
             android:id="@+id/action_studentAppBoard_to_studentFirstHelp"
             app:destination="@id/studentFirstHelp" />
+        <action
+            android:id="@+id/action_studentAppBoard_to_studentAD"
+            app:destination="@id/AD" />
+
     </fragment>
     <fragment
         android:id="@+id/studentAppContact"
@@ -74,6 +81,9 @@
         <action
             android:id="@+id/action_studentAppHome_to_studentAppBoard"
             app:destination="@id/studentAppBoard" />
+        <action
+            android:id="@+id/action_studentAppHome_to_studentFAQ"
+            app:destination="@id/studentFAQ" />
     </fragment>
     <fragment
         android:id="@+id/studentFirstHelp"
@@ -145,5 +155,45 @@
         <action
             android:id="@+id/action_studentView_to_studentAppContact"
             app:destination="@id/studentAppContact" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentLogin"
+        android:name="com.example.jobgeniet1.StudentLogin"
+        android:label="studentLogin" >
+        <action
+            android:id="@+id/action_studentLogin_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentLogin_to_studentUpdate"
+            app:destination="@id/studentUpdate" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentUpdate"
+        android:name="com.example.jobgeniet1.StudentUpdate"
+        android:label="student_update"
+        tools:layout="@layout/student_update" >
+        <action
+            android:id="@+id/action_studentUpdate_to_studentAppOptions"
+            app:destination="@id/studentAppOptions" />
+        <action
+            android:id="@+id/action_studentUpdate_to_studentLogin"
+            app:destination="@id/studentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/AD"
+        android:name="com.example.jobgeniet1.StudentAD"
+        android:label="NA">
+        <action
+            android:id="@+id/action_studentAD_to_studentAppBoard"
+            app:destination="@id/studentAppBoard"/>
+    </fragment>
+    <fragment
+        android:id="@+id/studentFAQ"
+        android:name="com.example.jobgeniet1.StudentFAQ"
+        android:label="faqstudent"
+        tools:layout="@layout/faqstudent" >
+        <action
+            android:id="@+id/action_studentFAQ_to_studentAppHome"
+            app:destination="@id/studentAppHome" />
     </fragment>
 </navigation>

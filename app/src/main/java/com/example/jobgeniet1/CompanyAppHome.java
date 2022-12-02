@@ -1,5 +1,6 @@
 package com.example.jobgeniet1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +50,19 @@ public class CompanyAppHome extends Fragment {
             public void onClick(View view) {
                 homer.SetHoming(true);
                 NavHostFragment.findNavController(CompanyAppHome.this).navigate(R.id.action_companyAppHome_to_companyFirstHelp);
+            }
+        });
+        binding.CompanyLogOut2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent logOut= new Intent(getActivity(),LoginActivity.class);
+                startActivity(logOut);
+            }
+        });
+        binding.button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(CompanyAppHome.this).navigate(R.id.action_companyAppHome_to_companyFAQ);
             }
         });
     }

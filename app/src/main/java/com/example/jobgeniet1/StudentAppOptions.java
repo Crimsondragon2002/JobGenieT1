@@ -1,5 +1,6 @@
 package com.example.jobgeniet1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,6 +48,13 @@ public class StudentAppOptions extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(StudentAppOptions.this).navigate(R.id.action_studentAppOptions_to_studentFirstHelp);
+            }
+        });
+        binding.StudentLogOut4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent logOut= new Intent(getActivity(),LoginActivity.class);
+                startActivity(logOut);
             }
         });
     }

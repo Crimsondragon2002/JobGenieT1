@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/company_app_nav_graph"
     app:startDestination="@id/companyAppHome">
 
@@ -20,6 +21,9 @@
         <action
             android:id="@+id/action_companyAppBoard_to_companyFirstHelp"
             app:destination="@id/companyFirstHelp" />
+        <action
+            android:id="@+id/action_companyAppBoard_to_companyAD"
+            app:destination="@id/companyAD" />
     </fragment>
     <fragment
         android:id="@+id/companyAppHome"
@@ -37,6 +41,9 @@
         <action
             android:id="@+id/action_companyAppHome_to_companyFirstHelp"
             app:destination="@id/companyFirstHelp" />
+        <action
+            android:id="@+id/action_companyAppHome_to_companyFAQ"
+            app:destination="@id/companyFAQ" />
     </fragment>
     <fragment
         android:id="@+id/companyAppOptions"
@@ -54,6 +61,9 @@
         <action
             android:id="@+id/action_companyAppOptions_to_companyFirstHelp"
             app:destination="@id/companyFirstHelp" />
+        <action
+            android:id="@+id/action_companyAppOptions_to_companyLogin"
+            app:destination="@id/companyLogin" />
     </fragment>
     <fragment
         android:id="@+id/companyAppContact"
@@ -145,5 +155,46 @@
         <action
             android:id="@+id/action_companyView_to_companyAppContact"
             app:destination="@id/companyAppContact" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyAD"
+        android:name="com.example.jobgeniet1.CompanyAD"
+        android:label="companyad"
+        tools:layout="@layout/companyad" >
+        <action
+            android:id="@+id/action_companyAD_to_companyAppBoard"
+            app:destination="@id/companyAppBoard" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyFAQ"
+        android:name="com.example.jobgeniet1.CompanyFAQ"
+        android:label="faqcompany"
+        tools:layout="@layout/faqcompany" >
+        <action
+            android:id="@+id/action_companyFAQ_to_companyAppHome"
+            app:destination="@id/companyAppHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyLogin"
+        android:name="com.example.jobgeniet1.CompanyLogin"
+        android:label="CompanyLogin" >
+        <action
+            android:id="@+id/action_companyLogin_to_companyAppOptions"
+            app:destination="@id/companyAppOptions" />
+        <action
+            android:id="@+id/action_companyLogin_to_companyUpdate"
+            app:destination="@id/companyUpdate" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyUpdate"
+        android:name="com.example.jobgeniet1.CompanyUpdate"
+        android:label="company_update"
+        tools:layout="@layout/company_update" >
+        <action
+            android:id="@+id/action_companyUpdate_to_companyAppOptions"
+            app:destination="@id/companyAppOptions" />
+        <action
+            android:id="@+id/action_companyUpdate_to_companyLogin"
+            app:destination="@id/companyLogin" />
     </fragment>
 </navigation>

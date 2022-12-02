@@ -4,37 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
-
+    tools:context=".StudentUpdate">
     <TextView
         android:id="@+id/textview_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="250dp"
         android:hint="Enter Student Info"
-        app:layout_constraintBottom_toTopOf="@id/button_back"
+        app:layout_constraintBottom_toTopOf="@id/companybutton_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/companybutton_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="350dp"
         android:text="@string/previous"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_second" />
 
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/companybutton_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="350dp"
         android:text="Next"
-        app:layout_constraintStart_toEndOf="@+id/button_back"
+        app:layout_constraintStart_toEndOf="@+id/companybutton_back"
         app:layout_constraintTop_toBottomOf="@+id/textview_second" />
 
     <EditText

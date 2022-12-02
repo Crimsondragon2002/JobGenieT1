@@ -1,5 +1,6 @@
 package com.example.jobgeniet1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -138,6 +139,13 @@ public class StudentAppContact extends Fragment {
             @Override
             public void onClick(View view) {
                 Dat.deleteTableF("list");
+            }
+        });
+        binding.StudentLogOut2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent logOut= new Intent(getActivity(),LoginActivity.class);
+                startActivity(logOut);
             }
         });
     }

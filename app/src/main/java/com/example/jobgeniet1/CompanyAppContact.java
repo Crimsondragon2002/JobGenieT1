@@ -1,5 +1,6 @@
 package com.example.jobgeniet1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -140,6 +141,13 @@ public class CompanyAppContact extends Fragment {
                 Dat.deleteTableF("list");
             }
         });
+        binding.CompanyLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent logOut= new Intent(getActivity(),LoginActivity.class);
+                startActivity(logOut);
+            }
+        });
     }
 
 
@@ -184,7 +192,7 @@ public class CompanyAppContact extends Fragment {
             }
 
         }
-        if(salary <= Integer.parseInt(sal[i])){
+        if(salary >= Integer.parseInt(sal[i])){
             salaryEquals = true;
         }
         boolean testEqual = false;

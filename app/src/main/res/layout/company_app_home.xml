@@ -10,7 +10,7 @@
         android:id="@+id/CompanyContact2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="5dp"
         android:text="Contact"
         app:layout_constraintEnd_toStartOf="@+id/CompanyHome2"
@@ -22,10 +22,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="5dp"
-        android:text="Home"
         android:enabled="false"
+        android:text="Home"
         app:layout_constraintEnd_toStartOf="@+id/CompanyBoard2"
         app:layout_constraintStart_toEndOf="@+id/CompanyContact2"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="5dp"
         android:text="Board"
         app:layout_constraintEnd_toStartOf="@+id/CompanyOptions2"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:text="Option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/CompanyBoard2"
@@ -71,4 +71,24 @@
         android:text="i"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/CompanyLogOut2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="logOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="150dp"
+        android:text="FAQ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

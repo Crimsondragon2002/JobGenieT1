@@ -10,10 +10,10 @@
         android:id="@+id/StudentContact2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="5dp"
-        android:text="Contact"
         android:enabled="false"
+        android:text="Contact"
         app:layout_constraintEnd_toStartOf="@+id/StudentHome2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="5dp"
         android:text="Home"
         app:layout_constraintEnd_toStartOf="@+id/StudentBoard2"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:layout_marginEnd="5dp"
         android:text="Board"
         app:layout_constraintEnd_toStartOf="@+id/StudentOptions2"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="550dp"
         android:text="Option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/StudentBoard2"
@@ -61,11 +61,12 @@
         android:text="i"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="250dp"
         android:text="Enter search info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -153,4 +154,12 @@
         android:hint="Enter salary in numbers USD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/StudenteditTextMatchCount" />
+    <Button
+        android:id="@+id/StudentLogOut2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="logOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

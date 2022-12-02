@@ -40,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 String user = e1.getText().toString();
                 String pass = e2.getText().toString();
-                Boolean Damnit = Dat.checkUser("ABC");
 
                 Boolean checkUser = Dat.checkUsernameAndPassword(user,pass);
                 Boolean checkType = Dat.checkUserType(user);
