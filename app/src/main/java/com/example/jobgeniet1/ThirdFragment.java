@@ -108,8 +108,6 @@ public class ThirdFragment extends Fragment {
 
 
 
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_ThirdFragment_to_FourthFragment);
             }
         });
 
