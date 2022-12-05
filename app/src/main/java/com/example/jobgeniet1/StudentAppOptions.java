@@ -57,6 +57,12 @@ public class StudentAppOptions extends Fragment {
                 startActivity(logOut);
             }
         });
+        binding.studentUpdater.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(StudentAppOptions.this).navigate(R.id.action_studentAppOptions_to_studentLogin);
+            }
+        });
     }
 
     @Override

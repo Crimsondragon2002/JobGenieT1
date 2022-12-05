@@ -49,9 +49,10 @@ public class StudentLogin extends Fragment {
         DBhelper Dat = new DBhelper(getContext());
 
         EditText e1,e2, e3;
-        e1 =(EditText) view.findViewById(R.id.username);
-        e2 =(EditText) view.findViewById(R.id.password);
+        e1 =(EditText) view.findViewById(R.id.studentusername);
+        e2 =(EditText) view.findViewById(R.id.studentpassword);
         e3 = (EditText) view.findViewById(R.id.oldName);
+        final int[] j = new int[1];
         binding.studentlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,15 +64,24 @@ public class StudentLogin extends Fragment {
                 Boolean checkType = Dat.checkUserType(user);
                 Boolean checkName = Dat.checkName(oldName);
                 if(e1.equals("")||e2.equals("")||e3.equals("")){
-                    Toast.makeText(getContext(),"A field is empty",Toast.LENGTH_LONG);
-
+                    Toast.makeText(getActivity().getApplicationContext(),"A field is empty",Toast.LENGTH_LONG);
+                    Log.i("warning","field empty");
                 }
                 else if(checkUser == false){
-                    Toast.makeText(getContext(),"Username or password is incorrect",Toast.LENGTH_LONG);
-
+                    Toast.makeText(getActivity().getApplicationContext(),"Username or password is incorrect",Toast.LENGTH_LONG);
+                    Log.i("warning","user false");
                 }
-                else if(checkName == false){
+                else if(checkName == true){
                     Toast.makeText(getContext(),"Name is incorrect",Toast.LENGTH_LONG);
+                    Log.i("warning","name false");
+                    String[] rows = Dat.getsecureRows(1);
+                    String[] nameRows = Dat.getRows(1);
+                    for(int i=0;i<500;i++){
+                        if(user.equals(rows[i])){
+                            j[0] = i;
+                        }
+                    }
+                    Log.i("sighting","wants "+nameRows[j[0]]+" sees " +oldName);
                 }
                 else{
                     Log.i("sighting","should still work");

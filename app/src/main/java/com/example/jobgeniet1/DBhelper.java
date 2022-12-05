@@ -93,10 +93,10 @@ public class DBhelper extends SQLiteOpenHelper {
         SQLiteDatabase Dat = this.getReadableDatabase();
         Cursor cursor = Dat.rawQuery("Select * from customers where name = ?", new String[]{name});
         if(cursor.getCount()>0){
-            return false;
+            return true;
         }
         else {
-            return true;
+            return false;
         }
     }
 
@@ -136,6 +136,20 @@ public class DBhelper extends SQLiteOpenHelper {
         String[] rows = new String[500];
         SQLiteDatabase Dat = this.getReadableDatabase();
         Cursor cursor = Dat.rawQuery("SELECT * FROM " + CustomerTABLE_NAME, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            int i = 0;
+            do {
+                rows[i] = cursor.getString(v);
+                i++;
+            } while (cursor.moveToNext());
+        }
+        return rows;
+
+    }
+    public String[] getsecureRows(int v) {
+        String[] rows = new String[500];
+        SQLiteDatabase Dat = this.getReadableDatabase();
+        Cursor cursor = Dat.rawQuery("SELECT * FROM " + "security", null);
         if (cursor != null && cursor.moveToFirst()) {
             int i = 0;
             do {

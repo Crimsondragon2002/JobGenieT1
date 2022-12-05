@@ -37,7 +37,7 @@ public class StudentAD extends Fragment {
             @Override
             public void onClick(View view) {
                 Dat.deleteTableF("customers");
-                Dat.deleteTableF("customers");
+                Dat.deleteTableF("security");
             }
         });
         binding.StudentDeleteSingle.setOnClickListener(new View.OnClickListener() {

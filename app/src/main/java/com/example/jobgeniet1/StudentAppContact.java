@@ -58,9 +58,9 @@ public class StudentAppContact extends Fragment {
         DBhelper Dat = new DBhelper(getContext());
         EditText ed1,ed2,ed3, ed4;
         ed1 = (EditText) view.findViewById(R.id.StudenteditTextSkills);
-        ed2 = (EditText) view.findViewById(R.id.editTextInternational);
-        ed3 = (EditText) view.findViewById(R.id.editTextMatchCount);
-        ed4 = (EditText) view.findViewById(R.id.editTextSalary);
+        ed2 = (EditText) view.findViewById(R.id.StudenteditTextInternational);
+        ed3 = (EditText) view.findViewById(R.id.StudenteditTextMatchCount);
+        ed4 = (EditText) view.findViewById(R.id.StudenteditTextSalary);
         binding.ViewData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +89,7 @@ public class StudentAppContact extends Fragment {
                 for(int i = 0; i<row.length;i++) {
                     matcher = 0;
                     for(int j = 0; j< newSkills.length;j++){
-                        Boolean checkList = setEquals(row[i],newSkills[j],international,i, salar,0 );
+                        Boolean checkList = setEquals(row[i],newSkills[j],international,i, salar );
                         if(checkList == true){
                             skiller+=newSkills[j]+",";
                             matcher++;
@@ -129,10 +129,10 @@ public class StudentAppContact extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Dat.insertData("Charlie","fishing,climbing",20,"y",0);
-                Dat.insertData("Steve","mining,crafting",15, "n",0);
-                Dat.insertData("William","coding,testing,stuff",5,"n",0);
-                Dat.insertData("Ellie","fishing,climbing,crafting",19,"y",0);
+                Dat.insertData("Survior","fishing,climbing",20,"y",1);
+                Dat.insertData("Mojang","mining,crafting",15, "n",1);
+                Dat.insertData("EA","coding,testing,stuff",5,"n",1);
+                Dat.insertData("Activision","fishing,climbing,crafting",19,"y",1);
             }
         });
         binding.ClearData.setOnClickListener(new View.OnClickListener() {
@@ -155,7 +155,7 @@ public class StudentAppContact extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-    public boolean setEquals(String name, String skills, String international, int i, int salary, int userType){
+    public boolean setEquals(String name, String skills, String international, int i, int salary){
         DBhelper Dat =  new DBhelper(getContext());
         String skiller[] = Dat.getRows(1);
         String skilling = skiller[i];
@@ -164,10 +164,12 @@ public class StudentAppContact extends Fragment {
         String[] newSkills = spacelessSkills.split("[,]",0);
         String internal[] = Dat.getRows(2);
         String[] sal = Dat.getRows(3);
+        String[] userType  = Dat.getRows(4);
         boolean skillEquals = false, internalEquals = false, salaryEquals= false, setEquals = false;
         if(international.equals("n")){
             if (internal[i].equals("n")){
                 internalEquals = true;
+                Log.i("sighting", "internal is true");
             }
             else {
                 internalEquals = false;
@@ -177,28 +179,32 @@ public class StudentAppContact extends Fragment {
         else if(international.equals("y")){
             if (internal[i].equals("n")){
                 internalEquals = true;
+                Log.i("sighting", "internal is true");
             }
             else {
                 internalEquals = true;
+                Log.i("sighting", "internal is true");
             }
         }
         for(int k = 0; k< newSkills.length; k++){
 
             if(newSkills[k].equals(skills)){
                 skillEquals = true;
-
+                Log.i("sighting", newSkills[k] + "sets skillEquals to true");
                 break;
             }
-
+            Log.i("sighting","wants "+ skills + " got "+newSkills[k]);
         }
         if(salary <= Integer.parseInt(sal[i])){
             salaryEquals = true;
+            Log.i("sighting",sal[i] + " sets salaryEquals to true");
         }
+
         boolean testEqual = false;
         if(skillEquals == true && internalEquals == true && salaryEquals == true){
             testEqual = true;
         }
-        if(testEqual == true && userType == 0){
+        if(testEqual == true && Integer.parseInt(userType[i]) == 1){
             setEquals = true;
         }
         return setEquals;

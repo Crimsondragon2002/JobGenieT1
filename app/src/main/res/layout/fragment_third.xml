@@ -24,7 +24,7 @@
         android:layout_marginStart="98dp"
         android:layout_marginTop="375dp"
         android:layout_marginEnd="34dp"
-        android:text="Previous"
+        android:hint="Previous"
         app:layout_constraintEnd_toStartOf="@+id/thirdNext"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_third" />
@@ -36,7 +36,7 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="375dp"
         android:layout_marginEnd="83dp"
-        android:text="Next"
+        android:hint="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/thirdPrevious"
         app:layout_constraintTop_toBottomOf="@+id/textview_third" />
@@ -50,7 +50,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name"
+        android:hint="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_third" />
 
@@ -62,7 +62,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="Enter Minumum accepted salary"
+        android:hint="Enter Minumum accepted salary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCompanyName" />
 
@@ -75,7 +75,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="Do you accept international workers"
+        android:hint="Do you accept international workers"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCompanySalary" />
 
@@ -88,7 +88,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name"
+        android:hint="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCompanyInternational" />
 
@@ -101,8 +101,22 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Password"
+        android:hint="Password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCompanyUsername" />
+
+    <EditText
+        android:id="@+id/editTextTextCompanySkills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:hint="Enter skills seperated by commmas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCompanyPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

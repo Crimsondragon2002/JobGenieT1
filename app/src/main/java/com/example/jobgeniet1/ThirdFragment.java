@@ -39,7 +39,7 @@ public class ThirdFragment extends Fragment {
         EditText CompanySalary = (EditText) view.findViewById(R.id.editTextCompanySalary);
         EditText CompanyInternational = (EditText) view.findViewById(R.id.editTextCompanyInternational);
         EditText CompanyUsername = (EditText) view.findViewById(R.id.editTextCompanyUsername);
-        EditText CompanyPassword = (EditText) view.findViewById(R.id.editTextStudentPassword);
+        EditText CompanyPassword = (EditText) view.findViewById(R.id.editTextCompanyPassword);
         EditText CompanySkills = (EditText) view.findViewById(R.id.editTextStudentSkills);
 
 
